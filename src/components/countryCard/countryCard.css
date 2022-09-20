@@ -1,0 +1,15 @@
+.country-card {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: 'detail' 'image';
+  width: 80vw;
+  margin: 10px;
+  padding: 10px;
+  border-bottom: 2px solid var(--color3);
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
