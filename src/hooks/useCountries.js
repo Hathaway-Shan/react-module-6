@@ -9,7 +9,6 @@ export default function useCountries() {
     async function fetchData() {
       const data = await fetchCountries();
       setCountries(data);
-      console.log('inside useEffect ----->', data);
     }
     fetchData();
   }, []);
