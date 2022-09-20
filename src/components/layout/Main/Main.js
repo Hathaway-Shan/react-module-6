@@ -4,7 +4,7 @@ import useCountries from '../../../hooks/useCountries';
 import Filter from '../../Filter/Filter';
 
 export default function Main() {
-  const { filterCountries, continent, setContinent } = useCountries();
+  const { filterCountries, continent, setContinent, error } = useCountries();
   return (
     <main>
       <Filter continent={continent} setContinent={setContinent} />
@@ -13,6 +13,7 @@ export default function Main() {
           <CountryCard key={country.id} {...country} />
         ))}
       </div>
+      <p>{error}</p>
     </main>
   );
 }
