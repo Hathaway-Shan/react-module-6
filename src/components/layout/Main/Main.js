@@ -4,10 +4,11 @@ import useCountries from '../../../hooks/useCountries';
 import Filter from '../../Filter/Filter';
 
 export default function Main() {
-  const { filterCountries, continent, setContinent, error } = useCountries();
+  const { filterCountries, continent, setContinent, error, loading } = useCountries();
   return (
     <main>
       <Filter continent={continent} setContinent={setContinent} />
+      <span>{loading ? <>loading...</> : <></>}</span>
       <div>
         {filterCountries().map((country) => (
           <CountryCard key={country.id} {...country} />
